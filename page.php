@@ -17,11 +17,12 @@ get_header(); ?>
     <div  id="content" class="container">
         
 	   <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
-            <main id="main" class="site-main" role="main">
+       
+             <main id="main" class="site-main" role="main" tabindex="-1">
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php get_template_part( 'content', 'page' ); ?>
+                    <?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
                     <?php
                         // If comments are open or we have at least one comment, load up the comment template
